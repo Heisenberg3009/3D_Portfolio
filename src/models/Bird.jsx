@@ -5,18 +5,22 @@ import { useAnimations, useGLTF } from "@react-three/drei";
 import birdScene from "../assets/3d/bird.glb";
 
 const Bird = () => {
-  const { scene, animations } = useGLTF(birdScene);
   const birdRef = useRef();
+  const { scene, animations } = useGLTF(birdScene);
+  const { actions } = useAnimations(animations, birdRef);
 
   useEffect(() => {
-    const birdRef = useRef();
-    const { scene, animations } = useGLTF(birdScene);
-    const { actions } = useAnimations(animations, birdRef);
+    actions["Take 001"].play();
   }, []);
 
-  useFrame((_, delta) => {
+  useFrame((clock, camera) => {
+    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
 
-  })
+    if (birdRef.current.rotation.y === 0) {
+      birdRef.current.rotation.x += 0.01;
+      birdRef.current.rotation.z -= 0.01;
+    }
+  });
 
   return (
     <mesh position={[-5, 2, 1]} scale={[0.003, 0.003, 0.003]} ref={birdRef}>
