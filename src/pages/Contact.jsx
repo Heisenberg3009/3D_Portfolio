@@ -1,9 +1,10 @@
-import  React, {useState} from 'react'
-
+import React, { useState } from "react";
 
 const Contact = () => {
-
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const handleChange = () => {};
+  const handleFocus = () => {};
+  const handleBlur = () => {};
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
@@ -17,13 +18,49 @@ const Contact = () => {
               name="name"
               className="input"
               placeholder="Enter your name"
-
+              value={form.name}
+              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
           </label>
+          <label className="text-black-500 font-semibold">
+            Email
+            <input
+              type="email"
+              name="email"
+              className="input"
+              placeholder="Enter your email address"
+              value={form.email}
+              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            />
+          </label>
+          <label className="text-black-500 font-semibold">
+            Your Message
+            <textarea
+              name="message"
+              rows = {4}
+              className="textarea"
+              placeholder="Let me know how I can help you!"
+              required
+              value={form.message}
+              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            />
+          </label>
+          <button
+            type = "submit"
+            className="btn"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
         </form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
