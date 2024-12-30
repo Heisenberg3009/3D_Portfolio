@@ -2,7 +2,7 @@ import { Suspense, React, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 
-import { Island } from "../models/Island";
+import Island from "../models/Island";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
@@ -71,7 +71,7 @@ const Home = () => {
             rotation={[0, 20, 0]}
           />
 
-          <Sky isRotating = {isRotating} />
+          <Sky isRotating={isRotating} />
 
           <Island
             position={islandPosition}
