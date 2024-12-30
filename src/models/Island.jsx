@@ -19,7 +19,7 @@ import islandScene from "../assets/3d/island.glb";
 export function Island({
   isRotating,
   setIsRotating,
-   setCurrentStage,
+  setCurrentStage,
   currentFocusPoint,
   ...props
 }) {
@@ -105,30 +105,30 @@ export function Island({
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
-
+  
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     lastX.current = clientX;
-  };
-
+  }
+  
   const handleTouchEnd = (e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
-  };
-
+  }
+  
   const handleTouchMove = (e) => {
     e.stopPropagation();
     e.preventDefault();
-
+  
     if (isRotating) {
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
       const delta = (clientX - lastX.current) / viewport.width;
-
+  
       islandRef.current.rotation.y += delta * 0.01 * Math.PI;
       lastX.current = clientX;
       rotationSpeed.current = delta * 0.01 * Math.PI;
     }
-  };
+  }
 
   useEffect(() => {
     // Add event listeners for pointer and keyboard events
@@ -188,7 +188,8 @@ export function Island({
        *     always stays within the range of 0 to 2 * Math.PI, which is equivalent to a full
        *     circle in radians.
        */
-      const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const normalizedRotation =
+        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
       switch (true) {
