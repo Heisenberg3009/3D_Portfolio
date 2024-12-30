@@ -19,7 +19,7 @@ import islandScene from "../assets/3d/island.glb";
 export function Island({
   isRotating,
   setIsRotating,
-  setCurrentStage,
+   setCurrentStage,
   currentFocusPoint,
   ...props
 }) {
@@ -188,8 +188,7 @@ export function Island({
        *     always stays within the range of 0 to 2 * Math.PI, which is equivalent to a full
        *     circle in radians.
        */
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
       switch (true) {
