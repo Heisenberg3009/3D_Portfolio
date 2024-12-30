@@ -8,22 +8,23 @@ import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 
 const Home = () => {
-  const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [isRotating, setIsRotating] = useState(false);
 
   const adjustIslandForScreenSize = () => {
-    let screenScale = null;
-    let screenPosition = [0, -6.5, -43];
-    let rotation = [0.1, 4.7, 0];
+    let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [0, -6.5, -43.4];
     } else {
       screenScale = [1, 1, 1];
+      screenPosition = [0, -6.5, -43.4];
     }
 
-    return [screenScale, screenPosition, rotation];
+    return [screenScale, screenPosition];
   };
+
 
   const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
@@ -74,11 +75,12 @@ const Home = () => {
           <Sky isRotating={isRotating} />
 
           <Island
-            position={islandPosition}
-            scale={islandScale}
-            rotation={islandRotation}
+            isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
+            position={islandPosition}
+            rotation={[0.1, 4.7077, 0]}
+            scale={islandScale}
           />
         </Suspense>
       </Canvas>
