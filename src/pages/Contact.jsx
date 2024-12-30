@@ -2,15 +2,21 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = () => {};
   const handleFocus = () => {};
   const handleBlur = () => {};
+  const handleSubmit = () => {};
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch!</h1>
-        <form className="w-full flex flex-col gap-7 mt-14">
+        <form
+          className="w-full flex flex-col gap-7 mt-14"
+          onSubmit={handleSubmit}
+        >
           <label className="text-black-500 font-semibold">
             Name
             <input
@@ -41,7 +47,7 @@ const Contact = () => {
             Your Message
             <textarea
               name="message"
-              rows = {4}
+              rows={4}
               className="textarea"
               placeholder="Let me know how I can help you!"
               required
@@ -52,11 +58,14 @@ const Contact = () => {
             />
           </label>
           <button
-            type = "submit"
+            type="submit"
             className="btn"
+            disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
-          />
+          >
+            {isLoading ? "Sending..." : "Send Message"}
+          </button>
         </form>
       </div>
     </section>
