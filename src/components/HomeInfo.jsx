@@ -18,7 +18,7 @@ const renderContent = {
       Hi, I am <span className="font-semibold">Tulsi</span>👋
       <br />
       <span className="text-sm">
-        A Software Engineer based in India and graduated from Australia.
+        A Software Engineer based in Australia.
       </span>
     </h1>
   ),
