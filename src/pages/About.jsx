@@ -1,4 +1,7 @@
 import React from "react";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 import { skills } from "../constants";
 
 const About = () => {
@@ -36,6 +39,17 @@ const About = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="py-16 ">
+          <h3 className="subhead-text">
+            <u>Work Experience</u>
+          </h3>
+          <div>
+            <p className="mt-5 flex flex-col gap-3 text-slate-500 text-justify">
+              I have worked with all sorts of clients and projects, levelling up my skills amd teaming up with smart colleagues and senior developers. Her's the rundown:
+            </p>
         </div>
       </div>
     </section>
