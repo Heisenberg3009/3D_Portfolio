@@ -11,7 +11,7 @@ const Projects = () => {
         {" "}
         My {""}
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Projects
+          <u> Upcoming Projects </u>
         </span>
       </h1>
       <div>

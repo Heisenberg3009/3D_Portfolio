@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { redback, gopher, brainovision } from "../assets/images";
 import {
   car,
   contact,
@@ -111,24 +111,24 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Intern - Deputy Team Leader",
+    company_name: "Brainovision Software Solutions",
+    icon: brainovision,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "August 2021 - February 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Performed as Deputy Team Leader with a multidisciplinary and cross-cultural team of nine students.",
+      "Developed a robust mobile application using Kotlin and Android APIs for the client to expand their revenue streams.",
+      "Designed a website for the client’s new venture using Python, Java and APIs.",
+      "Demonstrated the ability to participate in a hybrid environment consisting of both virtual and in-person activities and delivered key outcomes to the client within a set deadline.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Intern - Application Developer and Tester",
+    company_name: "Gopher Industries",
+    icon: gopher,
     iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    date: "August 2022 - February 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -137,24 +137,11 @@ export const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Intern - Web Developer",
+    company_name: "Redback Operations ",
+    icon: redback,
     iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
+    date: "August 2023 - February 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -173,12 +160,12 @@ export const socialLinks = [
   {
     name: "GitHub",
     iconUrl: github,
-    link: "https://github.com/YourGitHubUsername",
+    link: "https://github.com/Heisenberg3009",
   },
   {
     name: "LinkedIn",
     iconUrl: linkedin,
-    link: "https://www.linkedin.com/in/YourLinkedInUsername",
+    link: "https://linkedin.com/in/tulsinarayanan",
   },
 ];
 
@@ -189,31 +176,31 @@ export const projects = [
     name: "Amazon Price Tracker",
     description:
       "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+    link: "https://github.com/Heisenberg3009/Amazon-Price-Tracker",
   },
   {
     iconUrl: threads,
     theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    name: "Threads Clone",
     description:
       'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+    link: "https://github.com/Heisenberg3009/Threads-Clone",
   },
   {
     iconUrl: car,
     theme: "btn-back-blue",
-    name: "Car Finding App",
+    name: "Uber Clone",
     description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+      "Created a full-stack Uber Clone that allows riders to request rides and drivers to accept bookings, featuring real-time location tracking, dynamic pricing, and in-app payments for a seamless transportation experience.",
+    link: "https://github.com/Heisenberg3009/Uber-Clone",
   },
   {
     iconUrl: snapgram,
     theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
+    name: "Instagram Clone",
     description:
       "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
+    link: "https://github.com/Heisenberg3009/Instagram-Clone",
   },
   {
     iconUrl: estate,
@@ -221,7 +208,7 @@ export const projects = [
     name: "Real-Estate Application",
     description:
       "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
+    link: "https://github.com/Heisenberg3009/Real-Estate-Application",
   },
   {
     iconUrl: summiz,
@@ -229,6 +216,6 @@ export const projects = [
     name: "AI Summarizer Application",
     description:
       "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-    link: "https://github.com/adrianhajdin/project_ai_summarizer",
+    link: "https://github.com/Heisenberg3009/AI-Summarizer-Application",
   },
 ];
