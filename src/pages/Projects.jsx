@@ -1,6 +1,8 @@
 import React from "react";
 import { projects } from "../constants";
 import { Link } from "react-router-dom";
+import { arrow } from "../assets/icons";
+import CTA from "../components/CTA";
 
 const Projects = () => {
   return (
@@ -33,22 +35,33 @@ const Projects = () => {
               </div>
             </div>
             <div className="mt-5 flex flex-col">
-              <h4>
+              <h4 className="text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p>
+              <p className="mt-2 text-slate-500 text-justify">
                 {project.description}
               </p>
-              <div>
+              <div className="mt-5 flex items-center gap-2 font-poppins">
                 <Link
                   to={project.link}
                   target="_blank"
-                ></Link>
+                  rel=" noopener noreferrer"
+                  className="font-semibold text-blue-600"
+                >
+                  Live Link
+                </Link>
+                <img
+                  src={arrow}
+                  alt="arrow"
+                  className="w-4 h-4 object-contain"
+                />
               </div>
             </div>
           </div>
         ))}
       </div>
+      <hr className="border-slate-200" />
+      <CTA />
     </section>
   );
 };
